@@ -1,0 +1,22 @@
+--module-path
+"C:\\Users\\brian\\Desktop\\1."
+School
+"UMGC\\01."
+"Java\\JavaFX"
+"21.0.1\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1"
+--add-modules
+javafx.base,javafx.controls,
+javafx.fxml,
+javafx.graphics,
+javafx.media,
+javafx.properties,
+javafx.swing,
+javafx.web,
+javafx-swt
+-Dfile.encoding=UTF-8
+-Dstdout.encoding=UTF-8
+-Dstderr.encoding=UTF-8
+-classpath
+"C:\\Users\\brian\\Desktop\\1. School UMGC\\01. Java\\Eclipse\\Code Files\\Project_3\\bin"
+-XX:+ShowCodeDetailsInExceptionMessages
+Project3

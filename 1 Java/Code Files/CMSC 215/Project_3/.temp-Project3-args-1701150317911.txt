@@ -1,0 +1,11 @@
+"C:\\Users\\brian\\Desktop\\1."
+School
+"UMGC\\01."
+"Java\\JavaFX"
+"21.0.1\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib"
+-Dfile.encoding=UTF-8
+-Dstdout.encoding=UTF-8
+-Dstderr.encoding=UTF-8
+-classpath
+"C:\\Users\\brian\\Desktop\\1. School UMGC\\01. Java\\Eclipse\\Code Files\\Project_3\\bin"
+Project3
