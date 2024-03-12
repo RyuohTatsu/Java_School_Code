@@ -1,0 +1,18 @@
+{% extends "base2.html" %}
+{% block title %}Login Page{% endblock %}
+{% block content %}
+    <h2 style="text-align: center;">Login</h2>
+    <form style="text-align: center;" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="checkbox" id="change_password" name="change_password">
+        <label for="change_password">Change Password after Login</label><br>
+        <button type="submit">Login</button>
+    </form>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <p style="text-align: center;">Don't have an account? <a href="{{ url_for('register') }}">Register here</a>.</p>
+{% endblock %}

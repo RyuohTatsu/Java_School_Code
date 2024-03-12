@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}Body{% endblock %}
+{% block content %}
+<!-- Header section -->
+<div style="text-align: center;">
+    <h2>Python-Specific Security Checkers</h2>
+</div>
+
+<!-- Bandit -->
+<h3>Bandit</h3>
+<p style="margin-left: 20px; text-indent: 35px;">Bandit was developed by the Python Code Quality Authority (PyCQA) 
+(<a href="https://www.wiz.io/academy/open-source-code-security-tools#python-scanners-61">
+<i>The Open-Source Code Security Tool RoundUp</i>, 2023</a>). Bandit was designed to find common
+security issues. It does this by processing your .py file and builds an AST. It then runs
+plugins against the AST nodes to find vulnerabilities. When it is finished it will generate
+a report to tell the developer the results (<a href="https://bandit.readthedocs.io/en/latest/">
+<i>Welcome to Bandit — Bandit  Documentation</i>, n.d.</a>).</p>
+
+<!-- Pyre -->
+<h3>Pyre</h3>
+<p style="margin-left: 20px; text-indent: 35px;">Pyre was developed by Meta as open source 
+(<a href="https://www.wiz.io/academy/open-source-code-security-tools#python-scanners-61">
+<i>The Open-Source Code Security Tool RoundUp</i>, 2023</a>). Pyre was designed to perform
+incremental checks which will let the developer know right away if there is a problem in the
+code (<a href="https://pyre-check.org/"><i>Pyre | Pyre</i>, n.d.</a>). It is easy to install
+into your IDE.</p>
+
+<!-- Safety CLI -->
+<h3>Safety CLI</h3>
+<p style="margin-left: 20px; text-indent: 35px;">Safety CLI was developed by Safety CLI Cybersecurity Inc.
+It uses the Python vulnerability database Safety DB
+(<a href="https://www.wiz.io/academy/open-source-code-security-tools#python-scanners-61">
+<i>The Open-Source Code Security Tool RoundUp</i>, 2023</a>). Safety CLI can be used on developer
+machines to scan individual requirements files or perform system-wide scans
+(<a href="https://safetycli.com/product/safety-cli"><i>Safety CLI 3 - Python Vulnerability Scanner</i>,
+n.d.</a>). Safety CLI will recommend best security practice fixes to most of the vulnerabilities it
+finds to save the developer’s time.</p>
+
+<!-- Selection of Security Checker -->
+<div style="text-align: center;"><h2>Selection of Security Checker for Code Analysis</h2></div>
+<p style="margin-left: 20px; text-indent: 35px;">I will be using Bandit for this paper because it gives a report of
+any findings it finds. I have Pyre installed into my IDE that lets me know of vulnerabilities on
+the fly and I much prefer to know right away what I did wrong than going back after I finish the
+code only to find I need to rewrite sections to try and fix a problem. Although, using more than
+one security checker will help because any one checker is not 100% accurate.</p>
+
+<!-- Methodology for Code Analysis -->
+<div style="text-align: center;"><h2>Methodology for Code Analysis</h2></div>
+<!-- Code Used -->
+<h3>Code Used</h3>
+<p style="margin-left: 20px; text-indent: 35px;">The code that I chose to use was a lab that I did for SDEV 300 in
+week 4. I know there are vulnerabilities with this code because it uses older hashes on generated
+passwords. It was a practice to see the differences in hashes and use a hacking tool to see if the
+passwords could be hacked.</p>
+<p style="margin-left: 20px; text-indent: 35px;">The code also has a matrix game that uses numpy to calculate user
+input matrixes.</p>
+
+<!-- Explanation of the Process -->
+<h3>Explanation of the Process</h3>
+<p style="margin-left: 20px; text-indent: 35px;">I use VS code as my IDE. I installed Bandit and ran it on the .py
+file in my directory.</p>
+
+<!-- Results of Code Analysis -->
+<div style="text-align: center;"><h2>Results of Code Analysis</h2></div>
+<div style="text-align: center;"><figure>
+    <figcaption><i>Bandit Report</i><br>
+    <img src="/static/Picture1.png" alt="Figure 1"><br>
+    <img src="/static/Picture2.png" alt="Figure 1"><br>
+    <figcaption><i>Note.</i> Picture taken from VS Code IDE on my personal
+        computer.</figcaption>
+</figure></div>
+
+<!-- Summary of Results -->
+<h3>Summary of Results</h3>
+<p style="margin-left: 20px; text-indent: 35px;">The outcomes of the assessment deviated from my initial
+anticipations. While I foresaw security alerts related to outdated hashes, the evaluation
+unveiled a more concerning issue: the presence of hardcoded passwords across multiple
+instances. Although these hardcoded passwords may not pose an immediate high-severity
+threat, their existence introduces a vulnerability that could potentially lead to security
+breaches if exploited.</p>
+<p style="margin-left: 20px; text-indent: 35px;">Upon closer examination, I discerned that the root of this
+vulnerability lay in the manner in which I assigned passwords. I inadvertently stored
+passwords as plain text within open strings. This oversight not only violates fundamental
+security principles but also increases the likelihood of unauthorized access should these
+passwords be exposed.</p>
+
+<!-- Discussion on Vulnerability Fixes -->
+<h3>Discussion on Vulnerability Fixes</h3>
+<p style="margin-left: 20px; text-indent: 35px;">To address the vulnerabilities identified within the codebase,
+specific fixes are imperative. Firstly, tackling the issue of outdated hashes involves a
+meticulous review of the hashing algorithms employed. Outdated hashes, susceptible to various
+forms of attacks, necessitate an immediate upgrade to more robust and contemporary hashing
+techniques. This entails replacing deprecated algorithms like MD5 or SHA-1 with modern
+counterparts such as SHA-256 or bcrypt, ensuring a higher level of cryptographic security.
+On the other hand, mitigating the risk posed by hardcoded passwords demands a fundamental
+shift in approach. Rather than storing passwords directly within the source code, a more
+secure strategy involves dynamically generating passwords at runtime using a cryptographically
+secure random password generator. These dynamically generated passwords can then be securely
+managed and stored using encryption or other secure storage mechanisms, safeguarding
+sensitive credentials from unauthorized access or compromise. By implementing these fixes,
+the application fortifies its defenses against potential security threats, fostering a
+more robust and resilient security posture.</p>
+
+<!-- Conclusion -->
+<div style="text-align: center;"><h2>Conclusion</h2></div>
+<p style="margin-left: 20px; text-indent: 35px;">In conclusion, the evaluation of Python-specific security
+checkers, particularly Bandit, Pyre, and Safety CLI, has shed light on the critical role
+of secure coding practices in safeguarding software applications against potential security
+vulnerabilities. These tools serve as invaluable assets in the development process, enabling
+developers to identify and address security issues proactively. By selecting Bandit for code
+analysis, I was able to obtain insightful reports on security findings, facilitating timely
+remediation efforts. However, it is essential to acknowledge that no single security checker
+is infallible, emphasizing the importance of employing multiple tools and adopting a
+"shift-left" security approach to detect vulnerabilities early in the development lifecycle.</p>
+<p style="margin-left: 20px; text-indent: 35px;">Furthermore, the analysis of the code revealed unexpected
+vulnerabilities, including the presence of hardcoded passwords, highlighting the significance
+of thorough code review and adherence to best security practices. The discussion on
+vulnerability fixes underscored the need for robust measures such as upgrading outdated
+hashes and implementing secure password management techniques. These measures not only
+enhance the resilience of the application but also mitigate the risk of unauthorized
+access and data compromise.</p>
+<p style="margin-left: 20px; text-indent: 35px;">In essence, by integrating security checks into the development
+workflow and prioritizing the adoption of secure coding principles, developers can bolster
+the security posture of their applications and safeguard against potential threats. Moving
+forward, continued vigilance, regular updates, and ongoing education on emerging security
+trends will be crucial in maintaining a strong defense against evolving cyber threats.</p>
+
+<!-- Navigation links with forward and backward buttons -->
+<div style="text-align: center;"><h4>Navigation</h4>
+<ul style="text-align: center;">
+    <li><a href="title_page" class="button">&#9664; Title Page</a></li>
+    <li><a href="references" class="button">References &#9654;</a></li>
+</ul></div>
+{% endblock %}
+</body>
+</html>

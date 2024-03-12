@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Title Page{% endblock %}
+{% block content %}
+<!-- Header section -->
+<div style="text-align: center;">
+    <h1>Tools for Enforcing Secure Code</h1>
+    <h2>Evaluation of Python-Specific Security Checkers</h2>
+    <h3>Brian D. Walters<br>
+    Computer Science Department, University of Maryland Global Campus<br>
+    CMSC 360 6380 Secure Software Engineering (2242)<br>
+    Professor Kyle Johnson<br>
+    February 21, 2024</h3>
+</div>
+
+<hr>
+
+<!-- Secure Coding Overview -->
+<div style="text-align: center;"><h2>Secure Coding Overview</h2></div>
+
+<!-- Description of Secure Coding -->
+<p style="margin-left: 20px; text-indent: 35px;">Secure coding is the principle of designing code that adheres to
+code security best practices
+(<a href="https://www.checkpoint.com/cyber-hub/cloud-security/what-is-secure-coding/">Michali, 
+2022</a>). There are many tools available that help developers keep security in mind as they are
+writing the code. This is a big part of what the “Shift-left” security concept is about. These
+tools can be installed in your IDE and point out where a vulnerability might be while the developer
+is writing the code so you do not need to wait until the end to find the vulnerability.</p>
+
+<!-- Introduction to Security Checkers -->
+<p style="margin-left: 20px; text-indent: 35px;">This paper will look at three Security Checkers specifically for
+the Python language. (There are more security checkers that have multi-language support.)
+I will then choose one of the security checkers and analyze some Python code. I will discuss
+the results and the best practices to fix the vulnerabilities that were found.</p>
+
+<!-- Keywords list -->
+<div>
+    <p><i>Keywords:</i></p>
+    <ol>
+        <!-- List of keywords -->
+        <li>Secure Coding</li>
+        <li>Code Security Best Practices</li>
+        <li>Shift-Left</li>
+        <li>Python</li>
+        <li>IDE</li>
+        <li>Security Checker</li>
+    </ol>
+</div>
+
+<!-- Navigation links with forward and backward buttons -->
+<div style="text-align: center;"><h4>Navigation</h4>
+<ul style="text-align: center;">
+    <li><a href="body" class="button">Body &#9654;</a></li>
+    <li><a href="references" class="button">References &#9654;&#9654;</a></li>
+</ul></div>
+{% endblock %}

@@ -1,0 +1,202 @@
+/* Night Mode CSS */
+
+.flash-container {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f17108;
+    /* Background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    z-index: 9999;
+    /* Ensure it's on top of other elements */
+    text-align: center;
+    /* Center align the content */
+    font-size: 18px;
+    /* Adjust font size */
+    color: #000000;
+    /* Text color */
+}
+
+/* Style for the top banner */
+.top-banner {
+    background-image: url('/static/top_banner2.jpg');
+    padding: 10px;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top-banner p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.logoff-button {
+    background-color: #f5f6f6d6;
+    color: rgb(9, 8, 8);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Grid layout for main content and side banners */
+.container {
+    display: grid;
+    grid-template-columns: 10% 78% 10%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
+
+/* Left banner */
+.left-image {
+    background-image: url('/static/Picture4.png');
+    background-size: auto;
+    height: auto;
+    /* Fill full viewport height */
+}
+
+/* Right banner */
+.right-image {
+    background-image: url('/static/Picture4.png');
+    background-size: auto;
+    height: auto;
+    /* Fill full viewport height */
+}
+
+/* Centered content */
+.content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+/* Body background and text styles */
+body {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: #4e8cff;
+}
+
+a:hover {
+    color: #75aaff;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    max-width: 100%;
+    color: #e8e8e8;
+}
+
+/* Paragraphs */
+p {
+    max-width: 100%;
+    color: #dcdcdc;
+}
+
+/* List items */
+li {
+    color: #dcdcdc;
+}
+
+/* Borders */
+hr {
+    border-color: #505050;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    filter: invert(100%);
+}
+
+/* Code blocks */
+code {
+    background-color: #2d2d2d;
+    color: #b5b5b5;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #505050;
+    padding: 8px;
+}
+
+/* Syntax Highlighting */
+pre {
+    background-color: #2d2d2d;
+    color: #b5b5b5;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+/* Navigation links */
+ul {
+    list-style-type: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navigation link styling */
+ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Top and bottom navigation links */
+ul li a {
+    color: #4e8cff;
+    text-decoration: none;
+}
+
+/* Top and bottom navigation link hover effect */
+ul li a:hover {
+    color: #75aaff;
+}
+
+figure {
+    text-align: center;
+}
+
+/* Navigation Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b5b5b5e7;
+    color: rgb(6, 6, 6);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}

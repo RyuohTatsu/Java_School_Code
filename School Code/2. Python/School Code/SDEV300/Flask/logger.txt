@@ -1,0 +1,38 @@
+
+Brian,127.0.0.1
+2024-03-06 02:09:09,237 - INFO - Failed login attempt for username: Brian, from IP: 127.0.0.1
+2024-03-06 02:09:09,237 - INFO - 127.0.0.1 - - [06/Mar/2024 02:09:09] "POST / HTTP/1.1" 200 -
+2024-03-06 02:09:09,251 - INFO - 127.0.0.1 - - [06/Mar/2024 02:09:09] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+brian,127.0.0.1
+2024-03-06 02:10:59,124 - INFO - Failed login attempt for username: brian, from IP: 127.0.0.1
+2024-03-06 02:10:59,124 - INFO - 127.0.0.1 - - [06/Mar/2024 02:10:59] "POST / HTTP/1.1" 200 -
+2024-03-06 02:10:59,140 - INFO - 127.0.0.1 - - [06/Mar/2024 02:10:59] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:13:11,244 - INFO - 127.0.0.1 - - [06/Mar/2024 02:13:11] "POST / HTTP/1.1" 200 -
+2024-03-06 02:13:11,257 - INFO - 127.0.0.1 - - [06/Mar/2024 02:13:11] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:13:32,017 - INFO - 127.0.0.1 - - [06/Mar/2024 02:13:32] "POST / HTTP/1.1" 200 -
+2024-03-06 02:13:32,032 - INFO - 127.0.0.1 - - [06/Mar/2024 02:13:32] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:14:27,580 - INFO - 127.0.0.1 - - [06/Mar/2024 02:14:27] "POST / HTTP/1.1" 200 -
+2024-03-06 02:14:27,596 - INFO - 127.0.0.1 - - [06/Mar/2024 02:14:27] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:21:40,056 - INFO -  * Detected change in 'c:\\Users\\brian\\2. Code\\School Code\\2. Python\\School Code\\SDEV300\\Flask\\walters_flask_html_rendering_lab8.py', reloading
+Brian,127.0.0.1
+2024-03-06 02:33:03,544 - INFO - Failed login attempt for username: Brian, from IP: 127.0.0.1
+2024-03-06 02:33:03,552 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:03] "POST / HTTP/1.1" 200 -
+2024-03-06 02:33:03,669 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:03] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:33:18,654 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:18] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-03-06 02:33:18,671 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:18] "GET /change_password HTTP/1.1" 200 -
+2024-03-06 02:33:18,686 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:18] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:33:42,149 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:42] "POST /change_password HTTP/1.1" 200 -
+2024-03-06 02:33:42,162 - INFO - 127.0.0.1 - - [06/Mar/2024 02:33:42] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:34:48,498 - INFO - 127.0.0.1 - - [06/Mar/2024 02:34:48] "POST /change_password HTTP/1.1" 200 -
+2024-03-06 02:34:48,512 - INFO - 127.0.0.1 - - [06/Mar/2024 02:34:48] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:35:26,894 - INFO - 127.0.0.1 - - [06/Mar/2024 02:35:26] "POST /change_password HTTP/1.1" 200 -
+2024-03-06 02:35:26,908 - INFO - 127.0.0.1 - - [06/Mar/2024 02:35:26] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:36:04,406 - INFO - 127.0.0.1 - - [06/Mar/2024 02:36:04] "[32mPOST /change_password HTTP/1.1[0m" 302 -
+2024-03-06 02:36:04,411 - INFO - 127.0.0.1 - - [06/Mar/2024 02:36:04] "GET / HTTP/1.1" 200 -
+2024-03-06 02:36:04,424 - INFO - 127.0.0.1 - - [06/Mar/2024 02:36:04] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:37:36,941 - INFO - 127.0.0.1 - - [06/Mar/2024 02:37:36] "[32mPOST / HTTP/1.1[0m" 302 -
+2024-03-06 02:37:36,948 - INFO - 127.0.0.1 - - [06/Mar/2024 02:37:36] "GET /title_page HTTP/1.1" 200 -
+2024-03-06 02:37:36,976 - INFO - 127.0.0.1 - - [06/Mar/2024 02:37:36] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -
+2024-03-06 02:38:27,263 - INFO - 127.0.0.1 - - [06/Mar/2024 02:38:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-03-06 02:38:27,271 - INFO - 127.0.0.1 - - [06/Mar/2024 02:38:27] "GET / HTTP/1.1" 200 -
+2024-03-06 02:38:27,301 - INFO - 127.0.0.1 - - [06/Mar/2024 02:38:27] "[36mGET /static/night_mode.css HTTP/1.1[0m" 304 -

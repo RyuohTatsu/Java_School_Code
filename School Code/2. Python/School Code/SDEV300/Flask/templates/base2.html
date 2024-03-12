@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define character set and viewport for better rendering -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='night_mode.css') }}">
+</head>
+<body>
+    <!-- Include flash messages -->
+    {% include 'flash_messages.html' %}
+    <!-- Top banner -->
+    <div class="top-banner">
+        <!-- Display the current date -->
+        <p style="text-align: left;">Current Date: {{ current_date }}</p>
+        <!-- Display the current time -->
+        <p style="text-align: left;">Ciurrent Time: {{ current_time }}</p>
+        <!-- Display Banner Image Source -->
+        <p style="text-align: left;"><a href="https://www.freepik.com/free-vector/colorful-abstract-banners_3085167.htm">
+        Image by Marifdez on Freepik</a></p>
+    </div>
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Left side banner -->
+        <div class="left-image"></div>
+        <!-- Main content block -->
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <!-- Right side banner -->
+        <div class="right-image"></div>
+    </div>
+</body>
+</html>
