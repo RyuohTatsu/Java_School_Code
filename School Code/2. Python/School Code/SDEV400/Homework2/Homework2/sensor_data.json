@@ -1,0 +1,125 @@
+[
+  {
+    "Sensor": {"S": "TemperatureSensor1"},
+    "SensorDescription": {"S": "Measures ambient air temperature"},
+    "SampleRate": {"N": "1000"},
+    "Locations": {"L": [{"S": "Seattle WA"}, {"S": "New York NY"}]}
+  },
+  {
+    "Sensor": {"S": "PressureSensor2"},
+    "SampleRate": {"N": "500"},
+    "AdditionalAttribute": {"S": "Custom data for PressureSensor2"}
+  },
+  {
+    "Sensor": {"S": "HumiditySensor3"},
+    "SensorDescription": {"S": "Measures relative humidity"},
+    "SampleRate": {"N": "100"},
+    "Locations": {"L": [{"S": "Miami FL"}, {"S": "Chicago IL"}]},
+    "OperatingTemperatureRange": {"S": "-40 to 85 degrees Celsius"}
+  },
+  {
+    "Sensor": {"S": "LightSensor4"},
+    "SensorDescription": {"S": "Detects presence and intensity of light"},
+    "SampleRate": {"N": "20"},
+    "ImageFile": {"S": "/Sensors/images/light_sensor.jpg"}
+  },
+  {
+    "Sensor": {"S": "MotionSensor5"},
+    "SensorDescription": {"S": "Detects movement"},
+    "SampleRate": {"N": "10"},
+    "Locations": {"L": [{"S": "Building Entrance"}, {"S": "Server Room"}]},
+    "TriggerSensitivity": {"S": "Adjustable"}
+  },
+  {
+    "Sensor": {"S": "SmokeSensor6"},
+    "SensorDescription": {"S": "Detects smoke particles"},
+    "SampleRate": {"N": "1"},
+    "Locations": {"L": [{"S": "Kitchen"}, {"S": "Living Room"}]},
+    "AlarmThreshold": {"S": "User-configurable"}
+  },
+  {
+    "Sensor": {"S": "VibrationSensor7"},
+    "SensorDescription": {"S": "Detects vibrations"},
+    "SampleRate": {"N": "5000"},
+    "Applications": {"L": [{"S": "Machine health monitoring"}, {"S": "Structural integrity monitoring"}]}
+  },
+  {
+    "Sensor": {"S": "GasSensor8"},
+    "SensorDescription": {"S": "Detects presence of specific gases"},
+    "SampleRate": {"N": "100"},
+    "TargetGases": {"L": [{"S": "Carbon Monoxide (CO)"}, {"S": "Natural Gas (CH4)"}]}
+  },
+  {
+    "Sensor": {"S": "ProximitySensor10"},
+    "SensorDescription": {"S": "Detects nearby objects"},
+    "SampleRate": {"N": "200"},
+    "Applications": {"L": [{"S": "Robotic navigation"}, {"S": "Touchless controls"}]}
+  },
+  {
+    "Sensor": {"S": "CurrentSensor11"},
+    "SensorDescription": {"S": "Measures electric current"},
+    "SampleRate": {"N": "2000"},
+    "MeasurementRange": {"S": "0 to 10 Amps"}
+  },
+  {
+    "Sensor": {"S": "VoltageSensor12"},
+    "SensorDescription": {"S": "Measures electric voltage"},
+    "SampleRate": {"N": "1000"},
+    "MeasurementRange": {"S": "0 to 12 Volts DC"}
+  },
+  {
+    "Sensor": {"S": "PHSensor13"},
+    "SensorDescription": {"S": "Measures acidity or alkalinity of a liquid"},
+    "SampleRate": {"N": "10"},
+    "Applications": {"L": [{"S": "Water quality monitoring"}, {"S": "Hydroponics"}]}
+  },
+  {
+    "Sensor": {"S": "ConductivitySensor14"},
+    "SensorDescription": {"S": "Measures electrical conductivity of a liquid"},
+    "SampleRate": {"N": "50"},
+    "Applications": {"L": [{"S": "Salinity monitoring"}, {"S": "Nutrient monitoring"}]}
+  },
+  {
+    "Sensor": {"S": "ParticleSensor15"},
+    "SensorDescription": {"S": "Measures airborne particles"},
+    "SampleRate": {"N": "1000"},
+    "ParticleSizeRange": {"S": "PM2.5 to PM10"}
+  },
+  {
+    "Sensor": {"S": "StrainSensor16"},
+    "SensorDescription": {"S": "Measures mechanical strain"},
+    "SampleRate": {"N": "100"},
+    "Applications": {"L": [{"S": "Structural health monitoring"}, {"S": "Force measurement"}]}
+  },
+  {
+    "Sensor": {"S": "ImageSensor17"},
+    "SensorDescription": {"S": "Captures visual images"},
+    "SampleRate": {"N": "30"},
+    "Resolution": {"S": "1920x1080"}
+  },
+  {
+    "Sensor": {"S": "WaterLeakSensor20"},
+    "SensorDescription": {"S": "Detects presence of water"},
+    "SampleRate": {"N": "1"},
+    "AlarmThreshold": {"S": "Adjustable water level detection"}
+  },
+  {
+    "Sensor": {"S": "MotionSensorPIR19"},
+    "SensorDescription": {"S": "Detects movement using passive infrared (PIR) technology"},
+    "SampleRate": {"N": "1"},
+    "DetectionRange": {"S": "Up to 10 meters"}
+  },
+  {
+    "Sensor": {"S": "CO2Sensor18"},
+    "SensorDescription": {"S": "Detects carbon dioxide (CO2) levels"},
+    "SampleRate": {"N": "10"},
+    "MeasurementRange": {"S": "0 to 5000 ppm"}
+  },
+  {
+    "Sensor": {"S": "TemperatureAndHumiditySensor9"},
+    "SensorDescription": {"S": "Measures ambient temperature and relative humidity"},
+    "SampleRate": {"N": "60"},
+    "OperatingTemperatureRange": {"S": "-10 to 50 degrees Celsius"},
+    "HumidityRange": {"S": "0 to 100% RH"}
+  }
+]

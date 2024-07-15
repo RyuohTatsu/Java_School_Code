@@ -1,0 +1,29 @@
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Sensor",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "sensor_table",
+        "KeySchema": [
+            {
+                "AttributeName": "Sensor",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2024-07-09T06:58:26.340000+00:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 5,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:us-east-1:196738924816:table/sensor_table",
+        "TableId": "313676f1-fd6a-4b93-8f7a-dca03e2fe5e2",
+        "DeletionProtectionEnabled": false
+    }
+}

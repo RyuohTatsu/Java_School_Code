@@ -1,0 +1,19 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.base.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.controls.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.fxml.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.graphics.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.media.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.swing.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.web.jar",
+        "Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx-swt.jar",
+        "c:\\Users\\brian\\.vscode\\extensions\\redhat.java-1.32.0-win32-x64\\server\\plugins\\org.eclipse.m2e.maven.runtime_3.9.600.20231203-1234.jar",
+        "c:\\Users\\brian\\.vscode\\extensions\\vscjava.vscode-maven-0.44.0\\resources\\maven-wrapper\\.mvn\\wrapper\\maven-wrapper.jar",
+        "c:\\Users\\brian\\.vscode\\extensions\\vscjava.vscode-maven-0.44.0\\jdtls.ext\\com.microsoft.java.maven.plugin\\target\\com.microsoft.java.maven.plugin-0.39.0.jar",
+        "c:\\Users\\brian\\3. Programs\\VSCode\\javax.mail-1.6.2.jar",
+        "c:\\Users\\brian\\3. Programs\\VSCode\\javax.mail-api-1.6.2.jar",
+        "Homework_2/Homework_2/javax.activation.jar"
+    ]
+}

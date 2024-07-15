@@ -1,0 +1,32 @@
+-- Create Table
+
+    -- For .json file
+    aws dynamodb create-table --cli-input-json file://sensor_table.json
+    
+    -- For AWS CLI
+    aws dynamodb create-table --table-name sensor_table --attribute-definitions AttributeName=Sensor,AttributeType=S --key-schema AttributeName=Sensor,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 
+
+
+-- Table Items
+
+    -- For .json file 
+    jq -c '.[]' sensor_data.json | while read -r item; do
+        aws dynamodb put-item --table-name sensor_table --item "$item"
+    done
+    
+    -- Validate
+    jq . sensor_data.json  # This will parse the JSON and report any errors
+
+
+-- Print Table Items
+
+    -- For AWS CLI
+    aws dynamodb scan --table-name sensor_table
+
+
+
+-- Delete Tables
+
+    -- For AWS CLI
+    aws dynamodb delete-table --table-name sensor_table
+    aws dynamodb delete-table --table-name Courses
