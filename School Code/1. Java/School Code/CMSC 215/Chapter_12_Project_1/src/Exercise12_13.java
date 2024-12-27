@@ -38,6 +38,7 @@ public class Exercise12_13 {
 				// Create input file
 				Scanner input = new Scanner(file);) {
 			while (input.hasNext()) {
+				@SuppressWarnings("unused")
 				String line = input.next();
 				words++;
 			}

@@ -52,6 +52,39 @@
         "xutility": "cpp"
     },
     "java.project.sourcePaths": [
-        "1. Java/School Code"
+        "1. Java/School Code/SDEV 425/SDEV425_HW4/SDEV425_HW4",
+        "1. Java/School Code/CMSC 215"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derby.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyclient.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_cs.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_de_DE.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_es.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_fr.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_hu.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_it.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_ja_JP.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_ko_KR.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_pl.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_pt_BR.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_ru.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_zh_CN.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyLocale_zh_TW.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbynet.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyoptionaltools.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyrun.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbyshared.jar",
+        "c:\\Users\\brian\\3. Programs\\DB_Derby\\lib\\derbytools.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.base.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.controls.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.fxml.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.graphics.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.media.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.swing.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx.web.jar",
+        "1. Java/School Code/SDEV 425/Homework_2/Homework_2/javafx-sdk-21.0.1/lib/javafx-swt.jar",
+        "c:\\Users\\brian\\3. Programs\\javax.servlet-api-4.0-FINAL-javadoc.jar"
     ]
 }

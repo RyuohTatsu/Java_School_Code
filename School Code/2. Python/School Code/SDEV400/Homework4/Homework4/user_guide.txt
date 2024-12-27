@@ -1,0 +1,44 @@
+User Guide
+
+1. Register User:
+   - Select option 1 to register a new user.
+   - Enter your name when prompted.
+
+2. Sign In:
+   - Select option 2 to sign in as a registered user.
+   - Enter your name and user ID when prompted.
+   - If successful, you will be signed in and can play the game with your progress being tracked.
+
+3. Play Game as Guest:
+   - Select option 3 to play the game as a guest.
+   - Your progress will not be tracked on the leaderboard.
+
+4. View Leaderboard:
+   - Select option 4 to view the leaderboard.
+   - The leaderboard displays the PlayerID, Name, TimesPlayed, and BestLap for all registered users.
+
+5. View User Guide:
+   - Select option 5 to view the user guide from the S3 bucket.
+   - user_guide.txt will be printed to terminal.
+
+6. Exit:
+   - Select option 6 to exit the application.
+
+Game Rules
+
+In this game, you will need to navigate through a lap with 6 corners. For each corner, you must input 
+a braking distance between 200 feet and 50 feet. The speed for each corner is fixed but varies between 
+corners. The objective is to brake at the optimal distance for each corner to achieve the best lap time.
+
+Speed and Optimal Braking Distance:
+
+- The speed for each corner is set.
+- There is an optimal braking distance for each corner.
+
+Lap Time Calculation:
+
+- If you brake too early, the lap time will increase by 0.2 seconds for every 20 feet.
+- If you brake too late, the lap time will increase by 0.3 seconds for every 20 feet.
+- The optimal lap time is 1 minute and 30 seconds.
+
+Enjoy the game!

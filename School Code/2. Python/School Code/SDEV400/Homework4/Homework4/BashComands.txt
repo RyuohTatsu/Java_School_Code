@@ -1,0 +1,38 @@
+-- Create Table
+
+aws dynamodb create-table \
+    --table-name Leaderboard \
+    --attribute-definitions \
+        AttributeName=PlayerID,AttributeType=S \
+    --key-schema \
+        AttributeName=PlayerID,KeyType=HASH \
+    --provisioned-throughput \
+        ReadCapacityUnits=5,WriteCapacityUnits=5
+        
+-- List Tables
+
+aws dynamodb list-tables
+
+-- Create Bucket
+
+aws s3api create-bucket --bucket user.guide --region us-east-1
+
+-- Verify Bucket
+
+aws s3 ls
+
+-- Upload user_guide
+
+aws s3 cp user_guide.txt s3://user.guide/
+
+-- Verify upload
+
+aws s3 ls s3://user.guide/
+
+-- Make User Guide public
+
+aws s3api put-object-acl --bucket user.guide --key user_guide.txt --acl public-read
+
+-- Verify public access
+
+curl -k https://user.guide.s3.amazonaws.com/user_guide.txt

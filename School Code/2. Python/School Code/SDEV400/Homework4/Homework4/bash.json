@@ -1,0 +1,26 @@
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "PlayerID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Leaderboard",
+        "KeySchema": [
+            {
+                "AttributeName": "PlayerID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2024-08-05T07:48:35.031000+00:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 5,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+:
+

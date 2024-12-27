@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Authenticate</servlet-name>
+        <servlet-class>SDEV425_HW4.Authenticate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowAccount</servlet-name>
+        <servlet-class>SDEV425_HW4.ShowAccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Authenticate</servlet-name>
+        <url-pattern>/Authenticate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowAccount</servlet-name>
+        <url-pattern>/ShowAccount</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Ensure session timeout is secure, reduced to 15 minutes -->
+    <session-config>
+        <session-timeout>
+            15
+        </session-timeout>
+    </session-config>
+    
+    <!-- Welcome file configuration -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Security constraints to ensure secure access to servlets -->
+    <!-- <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Secure Area</web-resource-name>
+            <url-pattern>/ShowAccount</url-pattern> -->
+            <!-- Add other secure paths as needed -->
+        <!-- </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>  //Ensure roles are defined correctly 
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee> // Ensure HTTPS is used 
+        </user-data-constraint>
+    </security-constraint> -->
+    
+    <!-- Database connection parameters -->
+    <context-param>
+        <param-name>DB_NAME</param-name>
+        <param-value>SDEV425</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_SERVER</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_PORT</param-name>
+        <param-value>1527</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_USER</param-name>
+        <param-value>sdev425</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DB_PASSWORD</param-name>
+        <param-value>sdev425</param-value>
+    </context-param>
+</web-app>

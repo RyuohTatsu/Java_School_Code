@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="generator" content="Asciidoctor 2.0.17"/>
+<meta name="generator" content="Asciidoctor 2.0.23"/>
 <title>gitformat-pack(5)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
 <style>
@@ -84,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -140,7 +140,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -162,6 +162,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -208,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -330,7 +328,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -393,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -434,6 +432,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer{background:none}
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<style>
+pre>code {
+   display: inline;
+}
 </style>
 </head>
 <body class="manpage">
@@ -1051,6 +1054,18 @@ otherwise specified.</pre>
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>Bitmapped Packfiles (ID: {'B', 'T', 'M', 'P'})
+    Stores a table of two 4-byte unsigned integers in network order.
+    Each table entry corresponds to a single pack (in the order that
+    they appear above in the `PNAM` chunk). The values for each table
+    entry are as follows:
+    - The first bit position (in pseudo-pack order, see below) to
+      contain an object from that pack.
+    - The number of bits whose objects are selected from that pack.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>OID Fanout (ID: {'O', 'I', 'D', 'F'})
     The ith entry, F[i], stores the number of OIDs with first
     byte at most i. Thus F[255] stores the total
@@ -1206,6 +1221,112 @@ packs arranged in MIDX order (with the preferred pack coming first).</p>
 <p>The MIDX&#8217;s reverse index is stored in the optional <em>RIDX</em> chunk within
 the MIDX itself.</p>
 </div>
+<div class="sect2">
+<h3 id="_btmp_chunk"><code>BTMP</code> chunk</h3>
+<div class="paragraph">
+<p>The Bitmapped Packfiles (<code>BTMP</code>) chunk encodes additional information
+about the objects in the multi-pack index&#8217;s reachability bitmap. Recall
+that objects from the MIDX are arranged in "pseudo-pack" order (see
+above) for reachability bitmaps.</p>
+</div>
+<div class="paragraph">
+<p>From the example above, suppose we have packs "a", "b", and "c", with
+10, 15, and 20 objects, respectively. In pseudo-pack order, those would
+be arranged as follows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>|a,0|a,1|...|a,9|b,0|b,1|...|b,14|c,0|c,1|...|c,19|</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When working with single-pack bitmaps (or, equivalently, multi-pack
+reachability bitmaps with a preferred pack), <a href="git-pack-objects.html">git-pack-objects(1)</a>
+performs &#8220;verbatim&#8221; reuse, attempting to reuse chunks of the bitmapped
+or preferred packfile instead of adding objects to the packing list.</p>
+</div>
+<div class="paragraph">
+<p>When a chunk of bytes is reused from an existing pack, any objects
+contained therein do not need to be added to the packing list, saving
+memory and CPU time. But a chunk from an existing packfile can only be
+reused when the following conditions are met:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The chunk contains only objects which were requested by the caller
+(i.e. does not contain any objects which the caller didn&#8217;t ask for
+explicitly or implicitly).</p>
+</li>
+<li>
+<p>All objects stored in non-thin packs as offset- or reference-deltas
+also include their base object in the resulting pack.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>BTMP</code> chunk encodes the necessary information in order to implement
+multi-pack reuse over a set of packfiles as described above.
+Specifically, the <code>BTMP</code> chunk encodes three pieces of information (all
+32-bit unsigned integers in network byte-order) for each packfile <code>p</code>
+that is stored in the MIDX, as follows:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>bitmap_pos</code></dt>
+<dd>
+<p>The first bit position (in pseudo-pack order) in the
+multi-pack index&#8217;s reachability bitmap occupied by an object from <code>p</code>.</p>
+</dd>
+<dt class="hdlist1"><code>bitmap_nr</code></dt>
+<dd>
+<p>The number of bit positions (including the one at
+<code>bitmap_pos</code>) that encode objects from that pack <code>p</code>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>For example, the <code>BTMP</code> chunk corresponding to the above example (with
+packs &#8220;a&#8221;, &#8220;b&#8221;, and &#8220;c&#8221;) would look like:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;"/>
+<col style="width: 40%;"/>
+<col style="width: 40%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top"><code>bitmap_pos</code></th>
+<th class="tableblock halign-left valign-top"><code>bitmap_nr</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packfile &#8220;a&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packfile &#8220;b&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packfile &#8220;c&#8221;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>With this information in place, we can treat each packfile as
+individually reusable in the same fashion as verbatim pack reuse is
+performed on individual packs prior to the implementation of the <code>BTMP</code>
+chunk.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1341,7 +1462,7 @@ support for optional chunks of data, it may make sense to consolidate the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-20 18:35:40 UTC
+Last updated 2024-09-24 12:05:03 UTC
 </div>
 </div>
 </body>

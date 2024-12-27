@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="generator" content="Asciidoctor 2.0.17"/>
+<meta name="generator" content="Asciidoctor 2.0.23"/>
 <title>git-rebase(1)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"/>
 <style>
@@ -84,10 +84,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -140,7 +140,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -162,6 +162,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -208,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -330,7 +328,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -393,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -435,6 +433,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<style>
+pre>code {
+   display: inline;
+}
+</style>
 </head>
 <body class="manpage">
 <div id="header">
@@ -453,7 +456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         [--onto &lt;newbase&gt; | --keep-base] [&lt;upstream&gt; [&lt;branch&gt;]]
 <em>git rebase</em> [-i | --interactive] [&lt;options&gt;] [--exec &lt;cmd&gt;] [--onto &lt;newbase&gt;]
         --root [&lt;branch&gt;]
-<em>git rebase</em> (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)</pre>
+<em>git rebase</em> (--continue|--skip|--abort|--quit|--edit-todo|--show-current-patch)</pre>
 </div>
 </div>
 </div>
@@ -821,18 +824,37 @@ once the merge backend handles everything the apply one does.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1">--empty=(drop|keep|ask)</dt>
+<dt class="hdlist1">--empty=(drop|keep|stop)</dt>
 <dd>
 <p>How to handle commits that are not empty to start and are not
 clean cherry-picks of any upstream commit, but which become
 empty after rebasing (because they contain a subset of already
-upstream changes).  With drop (the default), commits that
-become empty are dropped.  With keep, such commits are kept.
-With ask (implied by <code>--interactive</code>), the rebase will halt when
-an empty commit is applied allowing you to choose whether to
-drop it, edit files more, or just commit the empty changes.
-Other options, like <code>--exec</code>, will use the default of drop unless
-<code>-i</code>/<code>--interactive</code> is explicitly specified.</p>
+upstream changes):</p>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>drop</code></dt>
+<dd>
+<p>The commit will be dropped. This is the default behavior.</p>
+</dd>
+<dt class="hdlist1"><code>keep</code></dt>
+<dd>
+<p>The commit will be kept. This option is implied when <code>--exec</code> is
+specified unless <code>-i</code>/<code>--interactive</code> is also specified.</p>
+</dd>
+<dt class="hdlist1"><code>stop</code></dt>
+<dt class="hdlist1"><code>ask</code></dt>
+<dd>
+<p>The rebase will halt when the commit is applied, allowing you to
+choose whether to drop it, edit files more, or just commit the empty
+changes. This option is implied when <code>-i</code>/<code>--interactive</code> is
+specified. <code>ask</code> is a deprecated synonym of <code>stop</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Note that commits which start empty are kept (unless <code>--no-keep-empty</code>
 is specified), and commits which are clean cherry-picks (as determined
@@ -1116,7 +1138,7 @@ split commits (see SPLITTING COMMITS below).</p>
 <div class="paragraph">
 <p>The commit list format can be changed by setting the configuration option
 rebase.instructionFormat.  A customized instruction format will automatically
-have the long commit hash prepended to the format.</p>
+have the commit hash prepended to the format.</p>
 </div>
 <div class="paragraph">
 <p>See also INCOMPATIBLE OPTIONS below.</p>
@@ -1203,21 +1225,29 @@ the root commit(s) on a branch.</p>
 <dt class="hdlist1">--autosquash</dt>
 <dt class="hdlist1">--no-autosquash</dt>
 <dd>
-<p>When the commit log message begins with "squash! &#8230;&#8203;" or "fixup! &#8230;&#8203;"
-or "amend! &#8230;&#8203;", and there is already a commit in the todo list that
-matches the same <code>...</code>, automatically modify the todo list of
-<code>rebase -i</code>, so that the commit marked for squashing comes right after
-the commit to be modified, and change the action of the moved commit
-from <code>pick</code> to <code>squash</code> or <code>fixup</code> or <code>fixup -C</code> respectively. A commit
-matches the <code>...</code> if the commit subject matches, or if the <code>...</code> refers
-to the commit&#8217;s hash. As a fall-back, partial matches of the commit
-subject work, too. The recommended way to create fixup/amend/squash
-commits is by using the <code>--fixup</code>, <code>--fixup=amend:</code> or <code>--fixup=reword:</code>
-and <code>--squash</code> options respectively of <a href="git-commit.html">git-commit(1)</a>.</p>
+<p>Automatically squash commits with specially formatted messages into
+previous commits being rebased.  If a commit message starts with
+"squash! ", "fixup! " or "amend! ", the remainder of the subject line
+is taken as a commit specifier, which matches a previous commit if it
+matches the subject line or the hash of that commit.  If no commit
+matches fully, matches of the specifier with the start of commit
+subjects are considered.</p>
 <div class="paragraph">
-<p>If the <code>--autosquash</code> option is enabled by default using the
-configuration variable <code>rebase.autoSquash</code>, this option can be
-used to override and disable this setting.</p>
+<p>In the rebase todo list, the actions of squash, fixup and amend commits are
+changed from <code>pick</code> to <code>squash</code>, <code>fixup</code> or <code>fixup -C</code>, respectively, and they
+are moved right after the commit they modify.  The <code>--interactive</code> option can
+be used to review and edit the todo list before proceeding.</p>
+</div>
+<div class="paragraph">
+<p>The recommended way to create commits with squash markers is by using the
+<code>--squash</code>, <code>--fixup</code>, <code>--fixup=amend:</code> or <code>--fixup=reword:</code> options of
+<a href="git-commit.html">git-commit(1)</a>, which take the target commit as an argument and
+automatically fill in the subject line of the new commit from that.</p>
+</div>
+<div class="paragraph">
+<p>Setting configuration variable <code>rebase.autoSquash</code> to true enables
+auto-squashing by default for interactive rebase.  The <code>--no-autosquash</code>
+option can be used to override that setting.</p>
 </div>
 <div class="paragraph">
 <p>See also INCOMPATIBLE OPTIONS below.</p>
@@ -1238,13 +1268,17 @@ rebase might result in non-trivial conflicts.</p>
 <p>Automatically reschedule <code>exec</code> commands that failed. This only makes
 sense in interactive mode (or when an <code>--exec</code> option was provided).</p>
 <div class="paragraph">
-<p>Even though this option applies once a rebase is started, it&#8217;s set for
-the whole rebase at the start based on either the
-<code>rebase.rescheduleFailedExec</code> configuration (see <a href="git-config.html">git-config(1)</a>
-or "CONFIGURATION" below) or whether this option is
-provided. Otherwise an explicit <code>--no-reschedule-failed-exec</code> at the
-start would be overridden by the presence of
-<code>rebase.rescheduleFailedExec=true</code> configuration.</p>
+<p>This option applies once a rebase is started. It is preserved for the whole
+rebase based on, in order, the command line option provided to the initial <code>git
+rebase</code>, the <code>rebase.rescheduleFailedExec</code> configuration (see
+<a href="git-config.html">git-config(1)</a> or "CONFIGURATION" below), or it defaults to false.</p>
+</div>
+<div class="paragraph">
+<p>Recording this option for the whole rebase is a convenience feature. Otherwise
+an explicit <code>--no-reschedule-failed-exec</code> at the start would be overridden by
+the presence of a <code>rebase.rescheduleFailedExec=true</code> configuration when <code>git
+rebase --continue</code> is invoked. Currently, you cannot pass
+<code>--[no-]reschedule-failed-exec</code> to <code>git rebase --continue</code>.</p>
 </div>
 </dd>
 <dt class="hdlist1">--update-refs</dt>
@@ -1374,7 +1408,7 @@ be dropped automatically with <code>--no-keep-empty</code>).</p>
 <p>Similar to the apply backend, by default the merge backend drops
 commits that become empty unless <code>-i</code>/<code>--interactive</code> is specified (in
 which case it stops and asks the user what to do).  The merge backend
-also has an <code>--empty=(drop|keep|ask)</code> option for changing the behavior
+also has an <code>--empty=(drop|keep|stop)</code> option for changing the behavior
 of handling commits that become empty.</p>
 </div>
 </div>
@@ -1402,7 +1436,7 @@ warnings in such cases.</p>
 <code>format-patch</code> internally), and then applying the patches in sequence
 (calling <code>am</code> internally).  Patches are composed of multiple hunks,
 each with line numbers, a context region, and the actual changes.  The
-line numbers have to be taken with some fuzz, since the other side
+line numbers have to be taken with some offset, since the other side
 will likely have inserted or deleted lines earlier in the file.  The
 context region is meant to help find how to adjust the line numbers in
 order to apply the changes to the right lines.  However, if multiple
@@ -1915,10 +1949,9 @@ non-0 status) to give you an opportunity to fix the problem. You can
 continue with <code>git rebase --continue</code>.</p>
 </div>
 <div class="paragraph">
-<p>The "exec" command launches the command in a shell (the one specified
-in <code>$SHELL</code>, or the default shell if <code>$SHELL</code> is not set), so you can
-use shell features (like "cd", "&gt;", ";" &#8230;&#8203;). The command is run from
-the root of the working tree.</p>
+<p>The "exec" command launches the command in a shell (the default one, usually
+/bin/sh), so you can use shell features (like "cd", "&gt;", ";" &#8230;&#8203;). The command
+is run from the root of the working tree.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2339,7 +2372,9 @@ rebase. False by default.</p>
 </dd>
 <dt class="hdlist1">rebase.autoSquash</dt>
 <dd>
-<p>If set to true enable <code>--autosquash</code> option by default.</p>
+<p>If set to true, enable the <code>--autosquash</code> option of
+<a href="git-rebase.html">git-rebase(1)</a> by default for interactive mode.
+This can be overridden with the <code>--no-autosquash</code> option.</p>
 </dd>
 <dt class="hdlist1">rebase.autoStash</dt>
 <dd>
@@ -2372,7 +2407,7 @@ Defaults to "ignore".</p>
 <dd>
 <p>A format string, as specified in <a href="git-log.html">git-log(1)</a>, to be used for the
 todo list during an interactive rebase.  The format will
-automatically have the long commit hash prepended to the format.</p>
+automatically have the commit hash prepended to the format.</p>
 </dd>
 <dt class="hdlist1">rebase.abbreviateCommands</dt>
 <dd>
@@ -2449,7 +2484,7 @@ When not configured, the default commit message editor is used instead.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-20 18:35:40 UTC
+Last updated 2024-09-24 12:05:03 UTC
 </div>
 </div>
 </body>

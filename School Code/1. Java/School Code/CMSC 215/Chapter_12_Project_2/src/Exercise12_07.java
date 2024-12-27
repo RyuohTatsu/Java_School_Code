@@ -15,6 +15,7 @@ public class Exercise12_07 {
 	 */
 
 	public static void main(String[] args) throws NumberFormatException {
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter an Integer: ");
 		String binaryString = input.nextLine();

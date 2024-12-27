@@ -62,7 +62,7 @@ public class Loan_Calculator extends Application {
 		double loanAmount = Double.parseDouble(tfLoanAmount.getText());
 
 		// Create a loan object. Loan defined in Listing 10.2
-		Loan loan = new Loan(interest, year, loanAmount);
+		Loan loan = new loan(interest, year, loanAmount);
 
 		// Display monthly payment and total payment
 		tfMonthlyPayment.setText(String.format("$%.2f", loan.getMonthlyPayment()));

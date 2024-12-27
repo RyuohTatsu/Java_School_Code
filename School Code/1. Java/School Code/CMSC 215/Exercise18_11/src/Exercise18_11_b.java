@@ -4,6 +4,7 @@ public class Exercise18_11_b {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		long number;
 
